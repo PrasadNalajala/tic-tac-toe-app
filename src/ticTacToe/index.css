@@ -1,13 +1,17 @@
 .title{
     color: rgb(82, 17, 222);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 28px;
+    font-style:initial;
+    font-weight: bold;
 }
+
 .row{
     display: flex;
     justify-content: center;
 }
-.box{
-    background-color: #ffffff;
+.box {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
     border-radius: 8px;
     height: 120px;
     width: 120px;
@@ -16,11 +20,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.box.no-click {
+    pointer-events: none;
+}
+
+/* Modify appearance on click */
+.box:active {
+    transform: scale(0.98); /* Example: Scale the element slightly down */
+    opacity: 0.8; /* Example: Reduce opacity when clicked */
+}
+
+
 .board{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 3%;
 }
 .reset-btn{
     color: #ffffff;
@@ -37,4 +55,31 @@
 .box-icon{
     height: 80px;
     width: 80px;
+}
+.winnerCS{
+    color: red;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: calc();
+}
+.winnerCS span{
+    color: #160d01;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+
+@media (max-width:480px){
+    .box{
+        height: 100px;
+        width: 100px;
+    }
+    .box-icon{
+        height: 65px;
+        width: 65px;
+    }
+    .board{
+        margin-top: 10%;
+    }
 }
