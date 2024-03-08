@@ -80,6 +80,13 @@
         width: 65px;
     }
     .board{
-        margin-top: 10%;
+        margin-top: 25%;
     }
+    .title{
+        margin-top: 10px;
+    }
+    .reset-btn{
+        margin-top: 10px;
+    }
+
 }
